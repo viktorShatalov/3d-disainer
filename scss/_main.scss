@@ -75,7 +75,6 @@
   background-position: center top;
   background-size: cover;
   padding-bottom: 25px;
-  margin-bottom: 75px;
   .heading {
     padding-top: 100px;
     margin-bottom: 20px;
@@ -96,7 +95,7 @@
   }
 }
 #price {
-  margin-bottom: 140px;
+  padding-top: 85px;
   .heading {
     margin-bottom: 85px;
   }
@@ -117,7 +116,7 @@
       margin: 0 auto 50px;
       img {
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
     .item__description {
@@ -206,6 +205,7 @@
   }
 }
 #portfolio {
+  padding-top: 90px;
   .heading {
     margin-bottom: 100px;
   }
@@ -262,6 +262,13 @@
         font-size: 24px;
         color: white;
       }
+    }
+    &.big {
+      width: 30%;
+      height: 400px;
+    }
+    &.small {
+      height: 263px;
     }
     &:hover {
       .item__img::before {

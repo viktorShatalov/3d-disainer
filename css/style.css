@@ -12,7 +12,6 @@
   -webkit-text-size-adjust: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -154,7 +153,12 @@ picture {
   background-size: cover;
   padding: 30px 0 85px;
   margin-bottom: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -30px;
   z-index: 4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #header .container {
@@ -382,7 +386,6 @@ nav.menu li a.active::after {
   background-position: center top;
   background-size: cover;
   padding-bottom: 25px;
-  margin-bottom: 75px;
 }
 
 #adout .heading {
@@ -419,7 +422,7 @@ nav.menu li a.active::after {
 }
 
 #price {
-  margin-bottom: 140px;
+  padding-top: 85px;
 }
 
 #price .heading {
@@ -457,8 +460,8 @@ nav.menu li a.active::after {
 
 .price__content-items .item .item__img img {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .price__content-items .item .item__description {
@@ -553,6 +556,10 @@ nav.menu li a.active::after {
   opacity: 1;
 }
 
+#portfolio {
+  padding-top: 90px;
+}
+
 #portfolio .heading {
   margin-bottom: 100px;
 }
@@ -631,6 +638,15 @@ nav.menu li a.active::after {
 .portfolio__content-items .item .item__descripton span {
   font-size: 24px;
   color: white;
+}
+
+.portfolio__content-items .item.big {
+  width: 30%;
+  height: 400px;
+}
+
+.portfolio__content-items .item.small {
+  height: 263px;
 }
 
 .portfolio__content-items .item:hover .item__img::before {

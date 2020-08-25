@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function () {
   // tabs
 
   let tab = function () {
@@ -45,4 +45,43 @@ jQuery(document).ready(function ($) {
       infinite: false,
     });
   }
+
+  // scroll
+  jQuery(window).scroll(function () {
+    let sections = jQuery("article");
+    sections.each(function (i, el) {
+      const top = jQuery(el).offset().top - 100;
+      const bottom = top + jQuery(el).height();
+      let scroll = jQuery(window).scrollTop();
+      let id = jQuery(el).attr("id");
+      console.log(top);
+      if (scroll > top && scroll < bottom) {
+        jQuery("#header .menu a.active, #footer .menu a.active").removeClass(
+          "active"
+        );
+        jQuery('a[href="#' + id + '"]').addClass("active");
+        jQuery("#header").css({
+          padding: "30px 0",
+        });
+      }
+      if (scroll <= 0) {
+        jQuery("#header").css({
+          padding: "30px 0 85px",
+        });
+      }
+    });
+  });
+  jQuery("nav.menu").on("click", "a", function (event) {
+    event.preventDefault();
+    let id = jQuery(this).attr("href"),
+      top = jQuery(id).offset().top - 40;
+    jQuery("body,html").animate({ scrollTop: top }, 300);
+  });
+
+  // показать больше работ
+  jQuery("#portfolio .last").hide();
+  jQuery("#portfolio .pink__btn").click(function (e) {
+    jQuery("#portfolio .last").slideToggle(180);
+    e.preventDefault();
+  });
 });
