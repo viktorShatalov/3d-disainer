@@ -1,0 +1,18 @@
+/* общие настройки */
+@import "_settings";
+
+@import "_fonts";
+@import "_variables";
+@import "_mixin";
+
+// header
+@import "_header";
+
+// main
+@import "_main.scss";
+
+// footer
+@import "_footer.scss";
+
+// media-query
+@import "_media.scss";

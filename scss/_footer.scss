@@ -1,0 +1,17 @@
+#footer {
+  background-image: url(../img/bg__footer.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 50px;
+  .container {
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer__signature {
+  p {
+    font-family: "Gilroy-Regular";
+  }
+}

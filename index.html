@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d-визуализация</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="container">
+            <picture class="logo">
+                <img src="img/logo.png" alt="логотип сайта">
+            </picture>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#adout" class="active">обо мне</a></li>
+                    <li><a href="#price">прайс</a></li>
+                    <li><a href="#portfolio">портфолио</a></li>
+                    <li><a href="#company">клиенты</a></li>
+                    <li><a href="#contacts__form">контакты</a></li>
+                </ul>
+            </nav>
+            <address class="contacts">
+                <a href="tel:8(800)6552211">8 (800) 655 22 11</a><br>
+                <a href="mailto:info@anna-3D.ru">info @ anna - 3D.ru</a>
+            </address>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- first__screen -->
+        <article id="first__screen">
+            <div class="container">
+                <div class="heading">
+                    <h1>делаю <span>качественную</span> 3d визуализацию и моделирование</h1>
+                </div>
+                <div class="first__screen-slider">
+                    <div class="slider__item left">
+                        <picture class="slider__img">
+                            <img src="img/icon/first1.png" alt="иконка слайдера">
+                        </picture>
+                        <div class="slider__description">
+                            <span>Высокое качество</span>
+                        </div>
+                    </div>
+                    <div class="slider__item center">
+                        <picture class="slider__img">
+                            <img src="img/icon/first2.png" alt="иконка слайдера">
+                        </picture>
+                        <div class="slider__description">
+                            <span>Низкие цены</span>
+                        </div>
+                    </div>
+                    <div class="slider__item right">
+                        <picture class="slider__img">
+                            <img src="img/icon/first3.png" alt="иконка слайдера">
+                        </picture>
+                        <div class="slider__description">
+                            <span>Быстрый результат</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a class="pink__btn" href="#contacts__form">оценить проект</a>
+                </div>
+            </div>
+        </article>
+        <!-- about -->
+        <article id="adout">
+            <div class="container">
+                <div class="heading">
+                    <h2>обо мне</h2>
+                    <span class="heading__description">короткий рассказ</span>
+                </div>
+                <div class="adout__content">
+                    <picture class="adout__content-img">
+                        <img src="img/img1.png" alt="фото">
+                    </picture>
+                    <div class="adout__content-description">
+                        <p>
+                            Привет. Меня зовут Анна. Я со своей командой работаем на рынке 3D визуализации и
+                            моделириования 8 лет и за это время визуализировали более 250 объектов для строительных
+                            организаций, архитектурных и интерьерных бюро, дизайн-студий, рекламных агентств.
+                        </p>
+                        <p>
+                            Мы уважаем своих клиентов, поэтому никогда не срываем сроки и всегда отвечаем на возникающие
+                            в процессе работы вопросы по телефону, Skype или e-mail.
+                        </p>
+                        <p>
+                            Работа с нами - это высокое качество, 100% ответственность, профессионализм и строгое
+                            соблюдение сроков.
+                        </p>
+                        <p>
+                            Мы реализуем даже самые амбициозные и нестандартные ваши идеи. Вы получите работу
+                            высочайшего уровня благодаря индивидуальному подходу к каждому клиенту и выработанным за
+                            время существования студии стандартов качества.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- price -->
+        <article id="price">
+            <div class="container">
+                <div class="heading">
+                    <h2>мой прайс</h2>
+                    <span class="heading__description">на услуги</span>
+                </div>
+                <div class="price__content-items">
+                    <div class="item left">
+                        <picture class="item__img">
+                            <img src="img/cow1.png" alt="картинка коровы 1">
+                        </picture>
+                        <div class="item__description">
+                            <h3 class="head">3D МОДЕЛИРОВАНИЕ</h3>
+                            <p class="text">
+                                Архитектурное, промышленное,
+                                для 3d печати, прототипирование,
+                                3d сканирование
+                            </p>
+                            <div class="btn">
+                                <a class="pink__btn" href="#contacts__form">оценить проект</a>
+                            </div>
+                            <p class="item__price">
+                                <span>от 3000 р.</span>
+                                <span>1-10 дней</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item center">
+                        <picture class="item__img">
+                            <img src="img/cow2.png" alt="картинка коровы 2">
+                        </picture>
+                        <div class="item__description">
+                            <h3 class="head">ВИЗУАЛИЗАЦИЯ</h3>
+                            <p class="text">
+                                Предметная, архитектурная (интерьерная, жилых комплексов, загородных домов и посёлков),
+                                ювелирных изделий, 3d туры и панорамы
+                            </p>
+                            <div class="btn">
+                                <a class="pink__btn" href="#contacts__form">оценить проект</a>
+                            </div>
+                            <p class="item__price">
+                                <span>от 5000 р.</span>
+                                <span>1-6 дней</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item right">
+                        <picture class="item__img">
+                            <img src="img/cow3.png" alt="картинка коровы 3">
+                        </picture>
+                        <div class="item__description">
+                            <h3 class="head">АНИМАЦИЯ</h3>
+                            <p class="text">
+                                Архитектурная, имиджевая, презентация продукта
+                            </p>
+                            <div class="btn">
+                                <a class="pink__btn" href="#contacts__form">оценить проект</a>
+                            </div>
+                            <p class="item__price">
+                                <span>от 600 р./ секунда</span>
+                                <span>от 3 дней</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- portfolio -->
+        <article id="portfolio">
+            <div class="container">
+                <div class="heading">
+                    <h2>портфолио</h2>
+                    <span class="heading__description">выполненных работ</span>
+                </div>
+                <div class="portfolio__content-items">
+                    <div class="item">
+                        <a data-fancybox="gallery" href="img/work3.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work2.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work1.jpg">
+                            <picture class="item__img">
+                                <img src="img/work1.jpg" alt="фото выполненных работ 1">
+                            </picture>
+                        </a>
+                        <div class="item__descripton">
+                            <span>Визуализация здания</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a data-fancybox="gallery" href="img/work5.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work6.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work2.jpg">
+                            <picture class="item__img">
+                                <img src="img/work2.jpg" alt="фото выполненных работ 2">
+                            </picture>
+                        </a>
+                        <div class="item__descripton">
+                            <span>Визуализация для<br> компьютерной игры</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a data-fancybox="gallery" href="img/work5.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work4.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work3.jpg">
+                            <picture class="item__img">
+                                <img src="img/work3.jpg" alt="фото выполненных работ 3">
+                            </picture>
+                        </a>
+                        <div class="item__descripton">
+                            <span>Моделирование автомобиля для каталога на сайте</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        </a>
+                        <a data-fancybox="gallery" href="img/work1.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work2.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work4.jpg">
+                            <picture class="item__img">
+                                <img src="img/work4.jpg" alt="фото выполненных работ 4">
+                            </picture>
+                        </a>
+                        <div class="item__descripton">
+                            <span>Визуализация<br>
+                                интерьера</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a data-fancybox="gallery" href="img/work3.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work2.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work4.jpg">
+                            <picture class="item__img">
+                                <img src="img/work5.jpg" alt="фото выполненных работ 5">
+                            </picture>
+                        </a>
+                        <div class="item__descripton">
+                            <span>моделтрование и<br>
+                                анимация персонажа</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a data-fancybox="gallery" href="img/work2.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work2.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work3.jpg">
+                            <picture class="item__img">
+                                <img src="img/work6.jpg" alt="фото выполненных работ 5">
+                            </picture>
+                        </a>
+                        <div class="item__descripton">
+                            <span>визуал для плаката игры</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a data-fancybox="gallery" href="img/work1.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work2.jpg"></a>
+                        <a data-fancybox="gallery" href="img/work3.jpg">
+                            <picture class="item__img">
+                                <img src="img/work7.jpg" alt="фото выполненных работ 7">
+                            </picture>
+                        </a>
+                        <div class="item__descripton">
+                            <span>моделирование для<br>
+                                игровой локации</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__btn">
+                    <div class="btn">
+                        <a class="pink__btn" href="">смотреть больше работ</a>
+                    </div>
+                    <div class="btn">
+                        <a class="blue__btn" href="#contacts__form">хочу заказать услугу</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- company -->
+        <article id="company">
+            <div class="container">
+                <div class="heading">
+                    <h2>компании</h2>
+                    <span class="heading__description">с которыми я работаю</span>
+                </div>
+                <div class="company__content">
+                    <ul class="tab">
+                        <li class="tablinks" datat-tab-name="tab-1"><span>Онлайн игры</span></li>
+                        <li class="tablinks" datat-tab-name="tab-2"><span>3D - проекты</span></li>
+                        <li class="tablinks active" datat-tab-name="tab-3"><span>Букмекерские конторы</span></li>
+                    </ul>
+                    <ul class="tabs__content tab-1">
+                        <li>
+                            <picture><img src="img/company/img1.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img2.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img3.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img4.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img5.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img6.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img7.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img9.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
+                        </li>
+                    </ul>
+                    <ul class="tabs__content tab-2">
+                        <li>
+                            <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img2.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img1.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img4.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img5.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img6.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img7.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
+                        </li>
+                    </ul>
+                    <ul class="tabs__content tab-3 active">
+                        <li>
+                            <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img2.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img3.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img4.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img5.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img6.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img7.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img9.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
+                        </li>
+                        <li>
+                            <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <!-- contacts__form -->
+        <article id="contacts__form">
+            <div class="container">
+                <div class="heading">
+                    <h2>оставьте заявку</h2>
+                    <span class="heading__description">Я свяжусь с вами в течении часа.</span>
+                </div>
+                <div class="contacts__form-content">
+                    <section class="content__form">
+                        <form>
+                            <input type="text" class="form__control" placeholder="Ваше имя ...">
+                            <input type="tel" class="form__control" placeholder="Номер телефона ...">
+                            <span class="btn__container">
+                                <input type="submit" value="отправить">
+                                <span>
+                                    <input type="checkbox" name="modal-checkbox" id="modal-checkbox" checked>
+                                    <label for="modal-checkbox">Вы соглашаетесь на нашу <a class="privacy__politic"
+                                            href="">политику<br>
+                                            обработки персональных данных</a>.</label>
+                                </span>
+                            </span>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </article>
+        <!-- contants -->
+        <article id="contacts">
+            <div class="container">
+                <div class="contacts__content-items">
+                    <div class="item">
+                        <span>контакты:</span>
+                    </div>
+                    <address class="item social">
+                        <p>
+                            <span>Телефон / Telegram / WhatsApp:</span><br>
+                            <a href="tel:8(800)5652211">8 (800) 565 22 11</a>
+                        </p>
+                        <p>
+                            <span>E-mail:</span><br>
+                            <a href="mailto:info@anna-3d.ru">info@anna-3d.ru</a>
+                        </p>
+                    </address>
+                    <adress class="item address">
+                        <p>
+                            <span>Мы работаем:<br>
+                                пн.-пт. (с 9:00 до 18:00)</span>
+                        </p>
+                        <p>
+                            <span>улица Мира, 3<br>
+                                Москва, Россия, 192 242</span>
+                        </p>
+                    </adress>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__signature">
+                <p>
+                    © Copyright by Anna 3D 2020 г.<br>
+                    Все права защищены
+                </p>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#adout" class="active">обо мне</a></li>
+                    <li><a href="#price">прайс</a></li>
+                    <li><a href="#portfolio">портфолио</a></li>
+                    <li><a href="#company">клиенты</a></li>
+                    <li><a href="#contacts__form">контакты</a></li>
+                </ul>
+            </nav>
+            <address class="contacts">
+                <a href="tel:8(800)6552211">8 (800) 655 22 11</a><br>
+                <a href="mailto:info@anna-3D.ru">info @ anna - 3D.ru</a>
+            </address>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
