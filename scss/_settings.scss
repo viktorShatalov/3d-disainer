@@ -170,9 +170,17 @@ picture {
 }
 .wpcf7-not-valid-tip {
   position: absolute;
-  left: 16%;
+  left: 0;
   bottom: -20px;
+  width: 100%;
 }
-.wpcf7 form .wpcf7-response-output{
-  margin: 0em 0.5em 1em;
+.wpcf7 form .wpcf7-response-output {
+  margin: 0 auto;
+}
+.wpcf7 form.invalid .wpcf7-response-output {
+  display: none !important;
+}
+
+#secondary {
+  display: none;
 }

@@ -10,34 +10,34 @@ Template Name: Главная страница
         <article id="first__screen">
             <div class="container">
                 <div class="heading">
-                    <h1>делаю <span>качественную</span> 3d визуализацию и моделирование</h1>
+                    <h1><?php $first_screen = get_field('pervyj_blok', 2); echo $first_screen['zagolovok'] ?></h1>
                 </div>
-                <div class="first__screen-slider">
+                <div class="first__screen-slider" style="background-image: url('<?= $first_screen['zadnij_fon'] ?>')">
                     <div class="slider__item left">
                         <picture class="slider__img">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/icon/first1.png"
-                                 alt="иконка слайдера">
+                            <img src="<?= $first_screen['ikonki']['ikonka_1'] ?>"
+                                 alt="Высокое качество">
                         </picture>
                         <div class="slider__description">
-                            <span>Высокое качество</span>
+                            <span><?= $first_screen['ikonki']['tekst_1'] ?></span>
                         </div>
                     </div>
                     <div class="slider__item center">
                         <picture class="slider__img">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/icon/first2.png"
-                                 alt="иконка слайдера">
+                            <img src="<?= $first_screen['ikonki']['ikonka_2'] ?>"
+                                 alt="Низкие цены">
                         </picture>
                         <div class="slider__description">
-                            <span>Низкие цены</span>
+                            <span><?= $first_screen['ikonki']['tekst_2'] ?></span>
                         </div>
                     </div>
                     <div class="slider__item right">
                         <picture class="slider__img">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/icon/first3.png"
-                                 alt="иконка слайдера">
+                            <img src="<?= wp_get_attachment_url($first_screen['ikonki']['ikonka_3']) ?>"
+                                 alt="Быстрый результат">
                         </picture>
                         <div class="slider__description">
-                            <span>Быстрый результат</span>
+                            <span><?= $first_screen['ikonki']['tekst_3'] ?></span>
                         </div>
                     </div>
                 </div>
@@ -47,19 +47,21 @@ Template Name: Главная страница
             </div>
         </article>
         <!-- about -->
-        <article id="adout">
+        <article id="about">
             <div class="container">
                 <div class="heading">
-                    <h2>обо мне</h2>
-                    <span class="heading__description">короткий рассказ</span>
+                    <h2><?php $about = get_field( 'obo_mne', 2 );
+                    echo $about['zagolovok']
+                    ?></h2>
+                    <span class="heading__description"><?= $about['podzagolovok'] ?></span>
                 </div>
-                <div class="adout__content">
-                    <picture class="adout__content-img">
-                        <img src="<?php $about = get_field( 'obo_mne', 2 );
+                <div class="about__content">
+                    <picture class="about__content-img">
+                        <img src="<?php
 						echo $about['foto_about'];
 						?>" alt="фото">
                     </picture>
-                    <div class="adout__content-description">
+                    <div class="about__content-description">
 						<?= $about['obo_mne_content'] ?>
                     </div>
                 </div>
@@ -69,13 +71,13 @@ Template Name: Главная страница
         <article id="price">
             <div class="container">
                 <div class="heading">
-                    <h2>мой прайс</h2>
-                    <span class="heading__description">на услуги</span>
+                    <h2><?php $price = get_field('prajs', 2); echo $price['zagolovok'] ?></h2>
+                    <span class="heading__description"><?= $price['podzagolovok'] ?></span>
                 </div>
                 <div class="price__content-items">
                     <div class="item left">
                         <picture class="item__img">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/cow1.png" alt="картинка коровы 1">
+                            <img src="<?php the_field('kartinka_1') ?>" alt="картинка коровы 1">
                         </picture>
                         <div class="item__description">
                             <h3 class="head"><?php the_field( 'zagolovok_price_1' ) ?></h3>
@@ -93,7 +95,7 @@ Template Name: Главная страница
                     </div>
                     <div class="item center">
                         <picture class="item__img">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/cow2.png" alt="картинка коровы 2">
+                            <img src="<?php the_field('kartinka_2') ?>" alt="картинка коровы 2">
                         </picture>
                         <div class="item__description">
                             <h3 class="head"><?php the_field( 'zagolovok_price_2' ) ?></h3>
@@ -134,8 +136,8 @@ Template Name: Главная страница
         <article id="portfolio">
             <div class="container">
                 <div class="heading">
-                    <h2>портфолио</h2>
-                    <span class="heading__description">выполненных работ</span>
+                    <h2><?= get_cat_name(2) ?></h2>
+                    <span class="heading__description"><?= category_description(2) ?></span>
                 </div>
                 <div class="portfolio__content-items">
 					<?php $posts = get_posts( [
@@ -242,8 +244,8 @@ Template Name: Главная страница
         <article id="company">
             <div class="container">
                 <div class="heading">
-                    <h2>компании</h2>
-                    <span class="heading__description">с которыми я работаю</span>
+                    <h2><?= get_cat_name(3) ?></h2>
+                    <span class="heading__description"><?= category_description(3) ?></span>
                 </div>
                 <div class="company__content">
                     <ul class="tab">
@@ -288,8 +290,8 @@ Template Name: Главная страница
         <article id="contacts__form">
             <div class="container">
                 <div class="heading">
-                    <h2>оставьте заявку</h2>
-                    <span class="heading__description">Я свяжусь с вами в течении часа.</span>
+                    <h2><?php $form_head = get_field('obratnaya_svyaz_forma', 2); echo $form_head['zagolovok'] ?></h2>
+                    <span class="heading__description"><?= $form_head['podzagolovok'] ?></span>
                 </div>
                 <div class="contacts__form-content">
                     <section class="content__form">
@@ -310,11 +312,11 @@ Template Name: Главная страница
                     <address class="item social">
                         <p>
                             <span>Телефон / Telegram / WhatsApp:</span><br>
-                            <a href="tel:<?= $contacts['phone'] ?>"><?= $contacts['phone'] ?></a>
+                            <a href="tel:<?= $contacts['phone'] ?>" ><?= $contacts['phone'] ?></a>
                         </p>
                         <p>
                             <span>E-mail:</span><br>
-                            <a href="mailto:<?= $contacts['e-mail'] ?>"><?= $contacts['e-mail'] ?></a>
+                            <a href="mailto:<?= $contacts['e-mail'] ?>" target="_blank"><?= $contacts['e-mail'] ?></a>
                         </p>
                     </address>
                     <adress class="item address">

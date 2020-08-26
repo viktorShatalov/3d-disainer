@@ -25,11 +25,6 @@ jQuery(document).ready(function () {
     };
   };
 
-  jQuery(window).on("load resize", function () {
-    if (jQuery(window).width() > 480) {
-      tab();
-    }
-  });
   //  mobile-menu
   const changeHeaderMenu = () => {
     jQuery("#header .container").css({
@@ -105,6 +100,55 @@ jQuery(document).ready(function () {
       e.preventDefault();
     });
   }
+
+  // modal
+
+  function modal() {
+    const openModalButtons = document.querySelectorAll("[data-modal-target]");
+    const closeModalButtons = document.querySelectorAll("[data-close-button]");
+    const overlay = document.getElementById("overlay");
+
+    openModalButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+      });
+    });
+
+    overlay.addEventListener("click", () => {
+      const modals = document.querySelectorAll(".modal.active");
+      modals.forEach((modal) => {
+        closeModal(modal);
+      });
+    });
+
+    closeModalButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modal = button.closest(".modal");
+        closeModal(modal);
+      });
+    });
+
+    function openModal(modal) {
+      if (modal == null) return;
+      modal.classList.add("active");
+      overlay.classList.add("active");
+    }
+
+    function closeModal(modal) {
+      if (modal == null) return;
+      modal.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  }
+  modal();
+
+  jQuery(window).on("load resize", function () {
+    if (jQuery(window).width() > 480) {
+      tab();
+    }
+  });
 });
 // mobile content
 jQuery(window).on("load resize", function () {
