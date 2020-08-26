@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -15,6 +16,7 @@
     <!-- header -->
     <header id="header">
         <div class="container">
+            <div class="burger"><span></span></div>
             <picture class="logo">
                 <img src="img/logo.png" alt="логотип сайта">
             </picture>
@@ -194,7 +196,7 @@
                             <span>Визуализация здания</span>
                         </div>
                     </div>
-                    <div class="item big">
+                    <div class="item big hide">
                         <a data-fancybox="gallery" href="img/work5.jpg"></a>
                         <a data-fancybox="gallery" href="img/work6.jpg"></a>
                         <a data-fancybox="gallery" href="img/work2.jpg">
@@ -206,7 +208,7 @@
                             <span>Визуализация для<br> компьютерной игры</span>
                         </div>
                     </div>
-                    <div class="item big">
+                    <div class="item big hide">
                         <a data-fancybox="gallery" href="img/work5.jpg"></a>
                         <a data-fancybox="gallery" href="img/work4.jpg"></a>
                         <a data-fancybox="gallery" href="img/work3.jpg">
@@ -342,113 +344,116 @@
                 </div>
                 <div class="company__content">
                     <ul class="tab">
-                        <li class="tablinks" datat-tab-name="tab-1"><span>Онлайн игры</span></li>
-                        <li class="tablinks" datat-tab-name="tab-2"><span>3D - проекты</span></li>
-                        <li class="tablinks active" datat-tab-name="tab-3"><span>Букмекерские конторы</span></li>
-                    </ul>
-                    <ul class="tabs__content tab-1">
-                        <li>
-                            <picture><img src="img/company/img1.png" alt="иконка компании"></picture>
+                        <li class="tablinks" datat-tab-name="tab-1"><span>Онлайн игры</span>
+                            <ul class="tabs__content tab-1">
+                                <li>
+                                    <picture><img src="img/company/img1.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img2.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img3.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img4.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img5.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img6.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img7.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img9.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <picture><img src="img/company/img2.png" alt="иконка компании"></picture>
+                        <li class="tablinks" datat-tab-name="tab-2"><span>3D - проекты</span>
+                            <ul class="tabs__content tab-2">
+                                <li>
+                                    <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img2.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img1.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img4.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img5.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img6.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img7.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <picture><img src="img/company/img3.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img4.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img5.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img6.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img7.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img9.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
-                        </li>
-                    </ul>
-                    <ul class="tabs__content tab-2">
-                        <li>
-                            <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img2.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img1.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img4.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img5.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img6.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img7.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
-                        </li>
-                    </ul>
-                    <ul class="tabs__content tab-3 active">
-                        <li>
-                            <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img2.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img3.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img4.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img5.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img6.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img7.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img9.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
-                        </li>
-                        <li>
-                            <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
+                        <li class="tablinks active" datat-tab-name="tab-3"><span>Букмекерские конторы</span>
+                            <ul class="tabs__content tab-3 active">
+                                <li>
+                                    <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img2.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img3.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img4.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img5.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img6.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img7.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img8.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img9.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img10.png" alt="иконка компании"></picture>
+                                </li>
+                                <li>
+                                    <picture><img src="img/company/img11.png" alt="иконка компании"></picture>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -466,10 +471,10 @@
                         <form>
                             <input type="text" class="form__control" placeholder="Ваше имя ...">
                             <input type="tel" class="form__control" placeholder="Номер телефона ...">
-                            <span class="btn__container">
-                                <input type="submit" value="отправить">
+                            <span class="btn__container btn">
+                                <span class="pink__btn">Отправить<input type="submit" value="отправить"></span>
                                 <span>
-                                    <input type="checkbox" name="modal-checkbox" id="modal-checkbox" checked>
+                                    <input required type="checkbox" name="modal-checkbox" id="modal-checkbox" checked>
                                     <label for="modal-checkbox">Вы соглашаетесь на нашу <a class="privacy__politic"
                                             href="">политику<br>
                                             обработки персональных данных</a>.</label>

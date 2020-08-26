@@ -24,27 +24,39 @@ jQuery(document).ready(function () {
       });
     };
   };
-  if (window.innerWidth > 425) {
-    tab();
-  }
-  //  mobile-menu
 
-  jQuery(".burger").click(function () {
-    jQuery(".burger,.header__bottom-menu").toggleClass("active");
-    if (jQuery(".mobile__content,.mobile__content-social").hasClass("active")) {
-      jQuery(".mobile__content,.mobile__content-social").removeClass("active");
+  jQuery(window).on("load resize", function () {
+    if (jQuery(window).width() > 480) {
+      tab();
     }
   });
-  // mobile content
-  if (window.innerWidth < 425) {
-    // sliders
-
-    $(".first__screen-slider").slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      infinite: false,
+  //  mobile-menu
+  const changeHeaderMenu = () => {
+    jQuery("#header .container").css({
+      "flex-direction": "row",
     });
-  }
+    jQuery("#header .logo").css({
+      display: "block",
+    });
+  };
+
+  jQuery(".burger").click(function () {
+    jQuery(".burger,#header nav.menu").toggleClass("active");
+    if (jQuery(this).hasClass("active")) {
+      jQuery("#header .container").css({
+        "flex-direction": "row-reverse",
+      });
+      jQuery("#header .logo").css({
+        display: "none",
+      });
+    } else {
+      changeHeaderMenu();
+    }
+  });
+  jQuery("#header nav.menu ul li a").on("click", function () {
+    jQuery(".burger,#header nav.menu").removeClass("active");
+    changeHeaderMenu();
+  });
 
   // scroll
   jQuery(window).scroll(function () {
@@ -54,7 +66,6 @@ jQuery(document).ready(function () {
       const bottom = top + jQuery(el).height();
       let scroll = jQuery(window).scrollTop();
       let id = jQuery(el).attr("id");
-      console.log(top);
       if (scroll > top && scroll < bottom) {
         jQuery("#header .menu a.active, #footer .menu a.active").removeClass(
           "active"
@@ -71,17 +82,50 @@ jQuery(document).ready(function () {
       }
     });
   });
-  jQuery("nav.menu").on("click", "a", function (event) {
+  jQuery(
+    "#first__screen .pink__btn,#price .pink__btn,#portfolio .blue__btn"
+  ).click(function () {
+    jQuery("html, body").animate(
+      { scrollTop: jQuery("#contacts__form").offset().top - 100 },
+      800
+    );
+  });
+  jQuery(".menu").on("click", "a", function (event) {
     event.preventDefault();
     let id = jQuery(this).attr("href"),
       top = jQuery(id).offset().top - 40;
-    jQuery("body,html").animate({ scrollTop: top }, 300);
+    jQuery("body,html").animate({ scrollTop: top }, 800);
   });
 
   // показать больше работ
   jQuery("#portfolio .last").hide();
-  jQuery("#portfolio .pink__btn").click(function (e) {
-    jQuery("#portfolio .last").slideToggle(180);
-    e.preventDefault();
-  });
+  if (jQuery("#portfolio .last").css("display") == "none") {
+    jQuery("#portfolio .pink__btn").click(function (e) {
+      jQuery("#portfolio .last,#portfolio .hide").slideDown(300);
+      e.preventDefault();
+    });
+  }
+});
+// mobile content
+jQuery(window).on("load resize", function () {
+  if (jQuery(window).width() < 480) {
+    // slider
+
+    jQuery(".first__screen-slider,.price__content-items").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      arrows: true,
+    });
+    jQuery(".tablinks").removeClass("active");
+    jQuery(".tab").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      arrows: true,
+    });
+
+    // .appendTo()
+    jQuery("#header .contacts").appendTo(jQuery("#header nav.menu "));
+  }
 });

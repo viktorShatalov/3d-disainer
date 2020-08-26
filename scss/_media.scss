@@ -3,16 +3,17 @@
 @media only screen and (min-width: 320px) and (max-width: 880px) {
   body,
   html {
-    // overflow-x: hidden;
+    overflow-x: hidden;
+    font-size: 16px;
   }
-  .conteiner {
+  .container {
     padding: 0 15px;
   }
   //  Burger Menu *******************************************************************************************
   .burger {
     display: block;
-    width: 64px;
-    height: 64px;
+    width: 34px;
+    height: 20px;
     position: relative;
     right: 0px;
     top: 0;
@@ -21,71 +22,81 @@
     @include transition;
     span {
       position: absolute;
-      background-color: white;
+      background-color: black;
       border-radius: 10px;
-      width: 24px;
+      width: 27px;
       height: 3px;
       top: 50%;
-      left: 50%;
-      transform: translateX(-50%);
+      transform: translateY(-50%);
+      left: 0;
       @include transition;
     }
     &::before,
     &::after {
       content: "";
-      background-color: white;
+      background-color: black;
       border-radius: 10px;
       position: absolute;
-      width: 24px;
       height: 3px;
-      left: 20px;
+      left: 0;
       @include transition;
     }
     &::before {
-      top: 23px;
+      top: 0;
+      width: 20px;
     }
     &::after {
-      bottom: 20px;
+      width: 100%;
+      bottom: 0;
     }
     &.active {
-      background-color: rgb(70, 0, 159);
+      height: 34px;
       span {
         transform: scale(0);
       }
     }
     &.active::before {
+      width: 100%;
+      top: 14px;
+      height: 5px;
+      background-color: rgb(248, 121, 176);
       transform: rotate(45deg);
-      top: 30px;
     }
     &.active::after {
+      bottom: 15px;
+      height: 5px;
+      background-color: rgb(248, 121, 176);
       transform: rotate(-45deg);
-      bottom: 31px;
     }
   }
 
-  .header__bottom-menu {
+  #header nav.menu {
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 100vh;
     z-index: 4;
-    top: 63px;
+    top: 0;
     left: 0;
-    background-color: rgb(70, 0, 159);
+    background-color: rgb(234, 228, 216);
     @include transition;
+    visibility: hidden;
+    opacity: 0;
     ul {
       @include flex;
       flex-direction: column;
-      margin: 48px 0 0;
+      margin: 100px 0 0;
       justify-content: center;
       align-items: center;
-      padding: 0 5px;
+      padding: 0 0 100px;
+
       li {
         margin: 0 !important;
         width: 100%;
-        padding: 7px 0;
+        text-align: center;
         a {
-          font-size: 1rem;
-          padding: 12px 0;
+          display: inline-block;
+          font-size: 24px;
+          padding: 10px 0;
           font-weight: bold;
         }
       }
@@ -101,4 +112,193 @@
   }
 
   // *********************************
+
+  #header {
+    padding: 15px 0 35px !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    .contacts {
+      display: block;
+      text-align: center;
+    }
+  }
+  .heading {
+    h1 {
+      font-size: 36px;
+      max-width: 300px;
+      margin: 0 auto 55px;
+    }
+    h2 {
+      font-size: 36px;
+    }
+    .heading__description {
+      font-size: 18px;
+    }
+  }
+  #first__screen {
+    padding-top: 100px;
+    .container .btn {
+      top: 78%;
+    }
+  }
+  .first__screen-slider {
+    padding: 0 0 300px;
+    background-size: 250%;
+    background-position: left 95% bottom 69%;
+    .slider__item {
+      max-width: 100%;
+      width: 300px;
+    }
+  }
+  #adout {
+    padding-bottom: 100px;
+    .heading {
+      margin-bottom: 60px;
+    }
+  }
+  .adout__content-img {
+    display: none;
+  }
+  #price {
+    padding-top: 0;
+    .container {
+      padding: 0;
+    }
+  }
+  .price__content-items {
+    .item {
+      max-width: 100%;
+    }
+    .slick-prev,
+    .slick-next {
+      top: 100px;
+    }
+    .slick-next {
+      right: 10px;
+      &::before {
+        right: 5px;
+      }
+    }
+    .slick-prev {
+      left: 10px;
+      &::before {
+        left: 5px;
+      }
+    }
+  }
+  .portfolio__content-items {
+    margin-bottom: 50px;
+    .item {
+      margin-bottom: 30px;
+      .item__descripton {
+        bottom: 25px;
+        span {
+          font-size: 18px;
+          max-width: 80%;
+          display: inline-block;
+        }
+      }
+      &.big {
+        width: 100%;
+        height: 290px;
+        .item__descripton {
+          bottom: 45px;
+        }
+      }
+      &.small {
+        width: 49%;
+        height: 160px;
+      }
+      &.hide {
+        display: none;
+      }
+    }
+  }
+  .portfolio__btn {
+    justify-content: center;
+    .pink__btn {
+      margin-bottom: 50px;
+    }
+  }
+
+  .company__content {
+    padding-bottom: 0;
+    .slick-prev,
+    .slick-next {
+      top: 15px;
+    }
+  }
+  li.tablinks {
+    height: auto;
+  }
+  ul.tabs__content {
+    display: flex;
+    top: 70px;
+    position: relative;
+    li {
+      margin: 0 auto 30px;
+    }
+    picture {
+      width: 100%;
+      max-width: 130px;
+      height: 100%;
+      img {
+        object-fit: contain;
+        height: 100%;
+      }
+    }
+  }
+  .slick-current.slick-current li.tablinks {
+    background-image: url(../img/tab-active.png);
+    background-repeat: no-repeat;
+    background-size: unset;
+    background-position: center top;
+    span {
+      color: white;
+      font-size: 18px;
+    }
+  }
+  #contacts__form {
+    background-size: cover;
+  }
+  .form__control {
+    margin: 0 auto 20px;
+  }
+  .contacts__form-content .btn__container {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .contacts__content-items .item:nth-child(1) {
+    margin-bottom: 50px;
+  }
+  #footer {
+    background-position: center top 20px;
+    padding-bottom: 30px;
+    .container {
+      flex-direction: column-reverse;
+    }
+    .contacts {
+      display: none;
+    }
+    nav.menu {
+      margin-bottom: 40px;
+      ul {
+        justify-content: flex-start;
+        li {
+          &:nth-child(2),
+          &:nth-child(4) {
+            margin: 0 17% 18px;
+          }
+        }
+      }
+    }
+  }
+  .footer__signature {
+    width: 100%;
+  }
+  .wpcf7-not-valid-tip {
+    bottom: 0;
+  }
 }
