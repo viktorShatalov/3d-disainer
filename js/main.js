@@ -69,6 +69,14 @@ jQuery(document).ready(function () {
         jQuery("#header").css({
           padding: "30px 0",
         });
+        if (jQuery(window).width() >= 768 && jQuery(window).width() <= 1024) {
+          jQuery("#header").css({
+            padding: "30px 0 20px",
+          });
+          jQuery("#header .contacts a").css({
+            "margin-bottom": "0",
+          });
+        }
       }
       if (scroll <= 0) {
         jQuery("#header").css({
@@ -152,7 +160,7 @@ jQuery(document).ready(function () {
 });
 // mobile content
 jQuery(window).on("load resize", function () {
-  if (jQuery(window).width() < 480) {
+  if (jQuery(window).width() <= 768) {
     // slider
 
     jQuery(".first__screen-slider,.price__content-items").slick({
